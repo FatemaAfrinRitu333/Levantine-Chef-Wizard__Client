@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -9,22 +10,21 @@ function Footer() {
         <Row>
           <Col md={6} xs={12}>
             <h3 className='brandName fw-bold'>Levantine Chef Wizard</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet elit vel tellus dignissim, ut aliquam massa elementum.</p>
+            <p>Discover the delicious world of Levantine cuisine with our exclusive collection of recipes from top chefs!</p>
           </Col>
           <Col md={3} xs={6}>
             <h3 className='brandName'>Links</h3>
-            <ul className="list-unstyled">
-              <li><a href="/">Home</a></li>
-              <li><a href="/about">About</a></li>
-              <li><a href="/contact">Contact</a></li>
+            <ul className="navbarLink d-grid">
+              <Link to="/">Home</Link>
+              <Link to="/blog">Blog</Link>
             </ul>
           </Col>
           <Col md={3} xs={6}>
             <h3 className='brandName'>Connect</h3>
-            <ul className="list-unstyled">
-              <li><a href="/">Facebook</a></li>
-              <li><a href="/">Twitter</a></li>
-              <li><a href="/">Instagram</a></li>
+            <ul className="navbarLink d-grid">
+              <Link to="/">Facebook</Link>
+              <Link to="/">Twitter</Link>
+              <Link to="/">Instagram</Link>
             </ul>
           </Col>
         </Row>
