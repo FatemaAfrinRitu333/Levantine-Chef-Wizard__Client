@@ -16,6 +16,7 @@ const SignIn = () => {
         const email = form.email.value;
         const password = form.password.value;
 
+        setError('');
         signIn(email, password)
             .then(result => {
                 const loggedUser = result.user;
@@ -29,6 +30,7 @@ const SignIn = () => {
     }
 
     const handleGoogleSignIn = () => {
+        setError('')
         signInWithGoogle()
             .then(result => {
                 const loggedUser = result.user;
@@ -41,6 +43,7 @@ const SignIn = () => {
     }
 
     const handleGithubSignIn = () => {
+        setError('')
         signInWithGithub()
             .then(result => {
                 const loggedUser = result.user;
@@ -57,7 +60,7 @@ const SignIn = () => {
             className="d-flex justify-content-center align-items-center my-5"
         >
             <div className="p-5 rounded shadow" style={{ backgroundColor: "#E4B363" }}>
-                <h2 className="text-center mb-4 fw-bolder brandName">Login</h2>
+                <h2 className="text-center mb-4 fw-bolder brandName">Please Login Here!</h2>
                 <Form onSubmit={handleSignIn}>
                     <Form.Group className="mb-2" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>

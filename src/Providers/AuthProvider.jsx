@@ -15,22 +15,28 @@ const AuthProvider = ({ children }) => {
     const [loader, setLoader] = useState(true);
 
     const signUp = (email, password) => {
+        setLoader(true)
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
     const signIn = (email, password) => {
+        setLoader(true)
         return signInWithEmailAndPassword(auth, email, password);
     }
 
     const signInWithGoogle = () => {
+        setLoader(true)
         return signInWithPopup(auth, googleAuthProvider)
     }
 
+
     const signInWithGithub = () => {
+        setLoader(true)
         return signInWithPopup(auth, githubAuthProvider)
     }
 
     const logOut = () => {
+        setLoader(true)
         return signOut(auth);
     }
 
@@ -47,6 +53,7 @@ const AuthProvider = ({ children }) => {
 
     const authInfo = {
         user,
+        loader,
         signUp,
         signIn,
         signInWithGoogle,
