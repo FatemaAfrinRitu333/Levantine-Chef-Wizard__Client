@@ -1,0 +1,48 @@
+.custom-color {
+    color: #4F3A2D;
+}
+
+a {
+    text-decoration: none;
+    color: #362318;
+}
+
+a:hover {
+    color: #864316;
+}
+
+.brandName {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    color: #4F3A2D;
+}
+
+.brandName:hover {
+    color: #864316;
+}
+
+.navbarLink,
+.navbarProfile {
+    gap: 12px;
+}
+
+.navbarLink a,
+.navbarProfile a {
+    text-decoration: none;
+    color: #362318;
+    padding: 3px;
+}
+
+.navbarLink a:hover,
+.navbarProfile a:hover {
+    color: #864316;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 991px) {
+
+    .navbarLink,
+    .navbarProfile {
+        gap: 0px;
+    }
+}
