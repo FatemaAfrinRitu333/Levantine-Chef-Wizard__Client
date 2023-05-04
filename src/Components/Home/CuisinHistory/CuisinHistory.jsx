@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Carousel } from 'react-bootstrap';
+import './CuisinHistory.css'
 
 function CuisinHistory() {
     const [index, setIndex] = useState(0);
@@ -21,12 +22,9 @@ function CuisinHistory() {
     };
 
     const caption = (
-        <div style={captionStyle}>
+        <div style={captionStyle} className='carousel-text'>
             <h3 className='brandName text-white text-center'>History of Levantine Cuisine</h3>
-            <p>Levantine cuisine is a rich and diverse culinary tradition that has its roots in the eastern Mediterranean region, including parts of Syria, Lebanon, Palestine, Jordan, and Israel. The cuisine has been shaped by centuries of cultural and historical influences, including Arab, Ottoman, and European, as well as the regions geography and climate. <br />
-            At its core, Levantine cuisine is characterized by fresh, seasonal ingredients, bold flavors, and simple cooking techniques that highlight the natural flavors of the food. The cuisine is also known for its vibrant colors and aromatic spices, which are used to enhance the flavors of dishes and create complex, layered tastes. <br />
-            Levantine cuisine is also known for its use of spices such as cumin, coriander, sumac, and zaatar, as well as fresh herbs like mint, parsley, and cilantro. Vegetables and grains are also important components of the cuisine, with dishes like mujadara (a lentil and rice dish) and stuffed grape leaves (a dish made with rice, herbs, and vegetables wrapped in grape leaves) being popular examples. <br />
-            Overall, Levantine cuisine is a celebration of fresh, flavorful ingredients and simple cooking techniques that have been honed over centuries of tradition and culture. It continues to be a beloved and vibrant culinary tradition today, both in the eastern Mediterranean region and around the world.
+            <p>Levantine cuisine is a style of cooking that originated in the Eastern Mediterranean region and has been influenced by various cultures and civilizations throughout the ages. It is known for its use of fresh, locally sourced ingredients such as vegetables, fruits, herbs, and spices, as well as meats like lamb and chicken, and grains like rice and bulgur. Some popular dishes include hummus, falafel, tabbouleh, baba ghanoush, shawarma, and kebab. The cuisine has a rich history that dates back thousands of years and has been shaped by various conquerors and empires, each of which brought their own culinary traditions and ingredients to the region.
             </p>
         </div>
     );
@@ -35,7 +33,7 @@ function CuisinHistory() {
         <Carousel activeIndex={index} onSelect={handleSelect} interval={3000}>
             <Carousel.Item>
                 <img
-                    className="d-block w-100 vh-100"
+                    className="d-block w-100 image-height"
                     src="/1.jpg"
                     alt="First slide"
                 />
@@ -43,7 +41,7 @@ function CuisinHistory() {
             </Carousel.Item>
             <Carousel.Item>
                 <img
-                    className="d-block w-100 vh-100"
+                    className="d-block w-100 image-height"
                     src="/3.jpg"
                     alt="Second slide"
                 />
@@ -51,7 +49,7 @@ function CuisinHistory() {
             </Carousel.Item>
             <Carousel.Item>
                 <img
-                    className="d-block w-100 vh-100"
+                    className="d-block w-100 image-height"
                     src="/4.jpg"
                     alt="Third slide"
                 />
@@ -59,7 +57,7 @@ function CuisinHistory() {
             </Carousel.Item>
             <Carousel.Item>
                 <img
-                    className="d-block w-100 vh-100"
+                    className="d-block w-100 image-height"
                     src="/5.jpg"
                     alt="Fourth slide"
                 />
@@ -67,7 +65,7 @@ function CuisinHistory() {
             </Carousel.Item>
             <Carousel.Item>
                 <img
-                    className="d-block w-100 vh-100"
+                    className="d-block w-100 image-height"
                     src="/6.jpg"
                     alt="Fifth slide"
                 />
