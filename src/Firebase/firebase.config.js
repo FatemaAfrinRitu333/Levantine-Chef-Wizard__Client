@@ -4,13 +4,15 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
+// console.log('environment variable', import.meta.env.VITE_apiKey)
 const firebaseConfig = {
-  apiKey: "AIzaSyCaEKakEJGTRgfqhXHaLHWL_lEh2V2z6uo",
-  authDomain: "levantine-cuisine.firebaseapp.com",
-  projectId: "levantine-cuisine",
-  storageBucket: "levantine-cuisine.appspot.com",
-  messagingSenderId: "153189529441",
-  appId: "1:153189529441:web:7f68fcd795ad99e16cf720"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID
 };
 
 // Initialize Firebase
