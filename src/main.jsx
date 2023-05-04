@@ -11,10 +11,10 @@ import Home from './Components/Home/Home.jsx';
 import ErrorPage from './Components/ErrorPage/ErrorPage.jsx';
 import Blog from './Components/Blog/Blog.jsx';
 import AuthProvider from './Providers/AuthProvider.jsx';
-import SignIn from './Components/UserReg/SignIn/SignIn.jsx';
-import SignUp from './Components/UserReg/SignUp/SignUp.jsx';
 import ChefDetail from './Components/Home/ChefDetail/ChefDetail.jsx';
 import PrivateRoute from './Routes/PrivateRoute.jsx';
+import SignIn from './Components/UserReg/SignIn/SignIn.jsx';
+import SignUp from './Components/UserReg/SignUp/SignUp.jsx';
 
 const router = createBrowserRouter([
   {
@@ -32,11 +32,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/signin',
-        element: <SignIn></SignIn>
+        element: <SignIn/>
       },
       {
         path: '/signup',
-        element: <SignUp></SignUp>
+        element: <SignUp />
       },
       {
         path: '/chefDetail/:id',
