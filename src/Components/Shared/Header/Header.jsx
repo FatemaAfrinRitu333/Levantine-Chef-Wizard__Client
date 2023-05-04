@@ -2,7 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
 import { FaUserAlt } from "react-icons/fa";
 import { useContext } from 'react';
@@ -38,8 +38,22 @@ function Header() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" className='navbar-custom ms-3'>
           <Nav className="me-auto navbarLink">
-            <Link to="/">Home</Link>
-            <Link to="/blog">Blog</Link>
+            <NavLink to="/" className={({ isActive, isPending }) =>
+                      isActive
+                        ? "text-muted"
+                        : isPending
+                        ? "pending"
+                        : ""
+                    }
+                  >Home</NavLink>
+            <NavLink to="/blog" className={({ isActive, isPending }) =>
+                      isActive
+                        ? "text-muted"
+                        : isPending
+                        ? "pending"
+                        : ""
+                    }
+                  >Blog</NavLink>
           </Nav>
           <Nav className='navbarProfile'>
             {
@@ -59,9 +73,9 @@ function Header() {
                   </Button>
                 </span>
                 :
-                <Link to="/signin">
+                <NavLink to="/signin">
                   <Button style={{ backgroundColor: "#4F3A2D", border: 'none' }}>Sign In</Button>
-                </Link>
+                </NavLink>
             }
           </Nav>
         </Navbar.Collapse>
