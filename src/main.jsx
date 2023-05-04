@@ -14,6 +14,7 @@ import AuthProvider from './Providers/AuthProvider.jsx';
 import SignIn from './Components/UserReg/SignIn/SignIn.jsx';
 import SignUp from './Components/UserReg/SignUp/SignUp.jsx';
 import ChefDetail from './Components/Home/ChefDetail/ChefDetail.jsx';
+import PrivateRoute from './Routes/PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -39,8 +40,8 @@ const router = createBrowserRouter([
       },
       {
         path: '/chefDetail/:id',
-        element: <ChefDetail></ChefDetail>,
-        loader: ({params}) => fetch(`https://assignment-ten-server-delta.vercel.app/chefDetail/${params.id}`)
+        element: <PrivateRoute><ChefDetail /></PrivateRoute>,
+        loader: ({ params }) => fetch(`https://assignment-ten-server-delta.vercel.app/chefDetail/${params.id}`)
       },
     ]
   },
