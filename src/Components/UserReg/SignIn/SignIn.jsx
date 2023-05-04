@@ -10,7 +10,6 @@ const SignIn = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";
-    console.log(location)
 
     const [error, setError] = useState('')
     const [show, setShow] = useState(false);
