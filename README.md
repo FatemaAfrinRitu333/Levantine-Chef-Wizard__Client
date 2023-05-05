@@ -1,4 +1,4 @@
-﻿# Levantine Chef Wizard: ## a world of Levantine Cuisine
+﻿# Levantine Chef Wizard: a world of Levantine Cuisine
 ### Site Link: https://levantine-cuisine.web.app
 ### 1. The site includes a section displaying the information of the chefs
 ### 2. Each chef has their own section that includes their work life information, bio, and recipes that they invented.
