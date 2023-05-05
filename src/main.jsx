@@ -40,7 +40,7 @@ const router = createBrowserRouter([
       {
         path: '/chefDetail/:id',
         element: <PrivateRoute><ChefDetail /></PrivateRoute>,
-        loader: ({ params }) => fetch(`https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-client-side-FatemaAfrinRituchefDetail/${params.id}`)
+        loader: ({ params }) => fetch(`https://assignment-ten-server-fatemaafrinritu.vercel.app/chefDetail/${params.id}`)
       },
     ]
   },

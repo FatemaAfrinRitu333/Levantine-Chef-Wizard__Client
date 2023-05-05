@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Card, Tab, Tabs } from 'react-bootstrap';
+import { FaDownload } from 'react-icons/fa';
 import Pdf from 'react-to-pdf'
 
 
@@ -12,7 +13,7 @@ const Blog = () => {
             <Pdf targetRef={ref} filename="levantine-chef-wizard-blog.pdf">
                 {({ toPdf }) => (
                     <button onClick={toPdf} className="btn btn-outline-warning mb-4">
-                        Download as PDF
+                       <FaDownload /> Download as PDF
                     </button>
                 )}
             </Pdf>

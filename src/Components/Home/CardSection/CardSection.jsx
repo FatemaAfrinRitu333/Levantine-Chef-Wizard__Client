@@ -7,7 +7,7 @@ const CardSection = () => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true)
     useEffect(() => {
-        fetch('https://assignment-ten-server-delta.vercel.app/chefCard')
+        fetch('https://assignment-ten-server-fatemaafrinritu.vercel.app/chefCard')
             .then(res => res.json())
             .then(data => setData(data))
         setLoading(false)
