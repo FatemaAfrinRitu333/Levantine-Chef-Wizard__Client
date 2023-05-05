@@ -17,7 +17,7 @@ const ChefCard = ({ chef }) => {
     <Col>
       <Card>
         <LazyLoad className='h-100'>
-          <Card.Img className='w-100' variant="top" src={chefPicture} />
+          <Card.Img style={{height: '360px'}} className='w-100' variant="top" src={chefPicture} />
         </LazyLoad>
         <Card.Body>
           <Card.Title className='brandName fw-bold'>
