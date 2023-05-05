@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Rating from 'react-rating';
 import { FaRegStar, FaStar, FaThumbsUp } from 'react-icons/fa';
 import toast, { Toaster } from 'react-hot-toast';
+import LazyLoad from 'react-lazyload';
 
 const Recipes = ({ recipe }) => {
 
@@ -11,7 +12,7 @@ const Recipes = ({ recipe }) => {
     const { recipeName, recipeImg, rating, ingredients, cookingMethod } = recipe;
 
     const notify = () => toast.success('The recipe is now your favorite!!');
-    const handleFavButton = () =>{
+    const handleFavButton = () => {
         setFav(true);
         notify();
     }
@@ -19,13 +20,15 @@ const Recipes = ({ recipe }) => {
     return (
         <div className="col">
             <div className="card">
-                <img src={recipeImg} style={{ height: '400px' }} className="card-img-top" alt="..." />
+                <LazyLoad>
+                    <img src={recipeImg} style={{ height: '400px' }} className="card-img-top" alt="..." />
+                </LazyLoad>
                 <div className="card-body">
                     <h4 className="card-title brandName mb-0 d-flex justify-content-between">
                         <>{recipeName}</>
                         <>
-                        <button onClick={handleFavButton} className='btn btn-outline-success' disabled={fav}><FaThumbsUp/></button>
-                        <Toaster />
+                            <button onClick={handleFavButton} className='btn btn-outline-success' disabled={fav}><FaThumbsUp /></button>
+                            <Toaster />
                         </>
                     </h4>
                     <hr />

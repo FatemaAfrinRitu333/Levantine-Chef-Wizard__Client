@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import './index.css';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -41,7 +40,7 @@ const router = createBrowserRouter([
       {
         path: '/chefDetail/:id',
         element: <PrivateRoute><ChefDetail /></PrivateRoute>,
-        loader: ({ params }) => fetch(`https://assignment-ten-server-delta.vercel.app/chefDetail/${params.id}`)
+        loader: ({ params }) => fetch(`https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-client-side-FatemaAfrinRituchefDetail/${params.id}`)
       },
     ]
   },

@@ -6,6 +6,7 @@ import { BiFoodMenu } from "react-icons/bi";
 import { TbChefHat } from "react-icons/tb";
 import { AiFillHeart } from "react-icons/ai";
 import { Link } from 'react-router-dom';
+import LazyLoad from 'react-lazyload';
 
 const ChefCard = ({ chef }) => {
 
@@ -15,7 +16,9 @@ const ChefCard = ({ chef }) => {
   return (
     <Col>
       <Card>
-        <Card.Img className='w-100' variant="top" src={chefPicture} />
+        <LazyLoad className='h-100'>
+          <Card.Img className='w-100' variant="top" src={chefPicture} />
+        </LazyLoad>
         <Card.Body>
           <Card.Title className='brandName fw-bold'>
             {chefName}

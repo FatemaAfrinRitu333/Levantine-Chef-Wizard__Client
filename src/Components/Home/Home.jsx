@@ -6,7 +6,7 @@ import Newsletter from './Newsletter/Newsletter';
 
 const Home = () => {
     return (
-        <div className=''>
+        <div>
             <HeroSection></HeroSection>
             <CardSection></CardSection>
             <CuisinHistory></CuisinHistory>

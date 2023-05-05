@@ -11,12 +11,8 @@ import { Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import Image from 'react-bootstrap/Image';
 
 function Header() {
-
-
   const { logOut, user } = useContext(AuthContext);
-  if (user) {
-    console.log(user.displayName)
-  }
+  
   const handleLogOut = () => {
     logOut()
       .then(result => { })

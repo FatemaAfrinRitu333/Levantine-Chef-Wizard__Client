@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProvider';
-import Spinner from 'react-bootstrap/Spinner';
+import Spinner from '../Components/Shared/Spinner/Spinner';
 
 const PrivateRoute = ({children}) => {
 
@@ -9,13 +9,9 @@ const PrivateRoute = ({children}) => {
     const location = useLocation();
 
     if(loader){
-        return <>
-            <Spinner animation="border" variant="warning" />
-            <Spinner animation="border" variant="warning" />
-            <Spinner animation="border" variant="warning" />
-            <Spinner animation="border" variant="warning" />
-            <Spinner animation="border" variant="warning" />
-        </>
+        return <div className='my-5 d-flex justify-content-center'>
+            <Spinner></Spinner>
+        </div>
     }
     if(user){
         return children;
