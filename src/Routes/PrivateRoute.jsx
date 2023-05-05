@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProvider';
-import Spinner from '../Components/Shared/Spinner/Spinner';
+import SpinnerCom from '../Components/Shared/SpinnerCom/SpinnerCom';
 
 const PrivateRoute = ({children}) => {
 
@@ -10,7 +10,7 @@ const PrivateRoute = ({children}) => {
 
     if(loader){
         return <div className='my-5 d-flex justify-content-center'>
-            <Spinner></Spinner>
+            <SpinnerCom></SpinnerCom>
         </div>
     }
     if(user){

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { CardGroup, Row } from 'react-bootstrap';
 import ChefCard from './ChefCard';
-import Spinner from '../../Shared/Spinner/Spinner'
+import SpinnerCom from '../../Shared/SpinnerCom/SpinnerCom'
 
 const CardSection = () => {
     const [data, setData] = useState([]);
@@ -14,7 +14,7 @@ const CardSection = () => {
     }, [])
 
     if (loading) {
-        return <Spinner></Spinner>
+        return <SpinnerCom></SpinnerCom>
     }
     return (
         <div className='my-5 container'>

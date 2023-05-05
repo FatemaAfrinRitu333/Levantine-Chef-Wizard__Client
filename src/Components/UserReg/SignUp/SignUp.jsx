@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container, Form, Button } from "react-bootstrap";
 import { FaGoogle, FaGithub, FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
 
@@ -13,6 +13,9 @@ const SignUp = () => {
     const [show, setShow] = useState(false);
     const [confirmShow, setConfirmShow] = useState(false);
 
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
 
     const handleSignUp = (event) => {
         event.preventDefault();
@@ -40,6 +43,7 @@ const SignUp = () => {
                 loggedUser.displayName = name;
                 loggedUser.photoURL = photoURL;
                 form.reset();
+                navigate(from)
             })
             .catch(error => {
                 console.log(error);
@@ -52,6 +56,7 @@ const SignUp = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
+                navigate(from)
             })
             .catch(error => {
                 console.log(error);
@@ -64,6 +69,7 @@ const SignUp = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
+                navigate(from)
             })
             .catch(error => {
                 console.log(error);
